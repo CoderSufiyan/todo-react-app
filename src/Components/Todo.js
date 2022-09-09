@@ -40,14 +40,14 @@ export default class Todo extends Component {
         {
             // use when need to write JS in jsx
 
-            this.state.tasks.map(function(taskObj) {
+            this.state.tasks.map((taskObj) => {
                 return (
                     <li key = {taskObj.id}>
                         <p>{taskObj.task}</p>
                         <button onClick={()=> this.handleDelete(taskObj.id)}>Delete</button>
                     </li>
                 )
-            }.bind(this))
+            })
         }
       </div>
     )
